@@ -1,0 +1,19 @@
+{
+    "scripts": {
+        "test": "NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules\" jest --testRegex='.*\\.spec\\.ts$'",
+        "test:compiled": "tsc && NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules\" jest --testRegex='.*\\.spec\\.js$'"
+    },
+    "jest": {
+        "moduleFileExtensions": [
+            "js",
+            "ts"
+        ],
+        "testRegex": ".*\\.spec\\.ts$",
+        "transform": {
+            "^.+\\.ts$": [
+                "ts-jest"
+            ]
+        },
+        "testEnvironment": "node"
+    }
+}
